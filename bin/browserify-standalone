@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+'use strict';
+
+var program = require('commander');
+var version = require('program-version');
+var meta = require("../");
+var shell = require("shelljs-nodecli");
+require('colors');
+
+// version.
+
+program.version(version());
+
+// options.
+
+program.option('-d, --directory [directory]', 'package directory', '.');
+
+// parse options.
+
+program.parse(process.argv);
+
+// get info.
+
+var info = {};
+
+try {
+  info = meta(program.directory);
+} catch (e) {
+  console.error('%s..Aborting!'.red, e.message);
+  process.exit(1);
+}
+
+// validate.
+
+if (!info.name || !info.main || !info.bundle_path || !info.entry_path) {
+  console.error("Incomplete metadata...Aborting!".red);
+  process.exit(1);
+}
+
+// get watches.
+
+shell.exec("browserify", "--entry", info.entry_path, "--outfile", info.bundle_path, "--standalone", info.name);
+
