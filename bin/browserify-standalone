@@ -37,7 +37,7 @@ if (!info.name || !info.main || !info.bundle_path || !info.entry_path) {
   process.exit(1);
 }
 
-// get watches.
+// browserify.
 
 shell.exec("browserify", "--entry", info.entry_path, "--outfile", info.bundle_path, "--standalone", info.name);
 
