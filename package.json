@@ -50,7 +50,5 @@
     "program-version": "^0.1.1",
     "shelljs-nodecli": "^0.1.1"
   },
-  "licenses": [
-    "MIT"
-  ]
+  "license": "MIT"
 }
