@@ -1,6 +1,6 @@
 # browserify-standalone
 
-[![Build Status](http://img.shields.io/travis/wilmoore/browserify-standalone.svg)](https://travis-ci.org/wilmoore/browserify-standalone) [![NPM version](http://img.shields.io/npm/v/browserify-standalone.svg)](https://www.npmjs.org/package/browserify-standalone) [![NPM downloads](http://img.shields.io/npm/dm/browserify-standalone.svg)](https://www.npmjs.org/package/browserify-standalone) [![LICENSE](http://img.shields.io/npm/l/browserify-standalone.svg)](LICENSE)
+[![Build Status](http://img.shields.io/travis/wilmoore/browserify-standalone.svg)](https://travis-ci.org/wilmoore/browserify-standalone) [![NPM version](http://img.shields.io/npm/v/browserify-standalone.svg)](https://www.npmjs.org/package/browserify-standalone) [![NPM downloads](http://img.shields.io/npm/dm/browserify-standalone.svg)](https://www.npmjs.org/package/browserify-standalone) [![LICENSE](http://img.shields.io/npm/l/browserify-standalone.svg)](license)
 
 > Browserify standalone (UMD) build based on values in your package.json (`name` and `main`).
 
@@ -38,5 +38,5 @@ Given the following `package.json`, the file `somepackage.js` will be created.
 
 ## License
 
-  [MIT](LICENSE)
+  [MIT](license)
 
